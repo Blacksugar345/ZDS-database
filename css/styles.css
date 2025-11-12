@@ -47,7 +47,7 @@ body {
     height: 100%;
     background: 
         linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.85)),
-        url('../img/background.jpg') center/cover no-repeat;
+        url('../img/Background.jpg') center/cover no-repeat;
     z-index: -2;
 }
 
@@ -102,7 +102,7 @@ header {
 .logo-icon {
     width: 60px;
     height: 60px;
-    background: url('../img/logo.png') center/cover no-repeat;
+    background: url('../img/Logo.png') center/cover no-repeat;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(81, 74, 177, 0.6);
     animation: pulse 2s ease-in-out infinite;
@@ -433,3 +433,4 @@ main {
     background: linear-gradient(90deg, #b580ff, #9d5dff);
     transform: scale(1.05);
 }
+
