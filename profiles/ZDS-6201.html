@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Profile — Dominik Burgstaller (KUROSATOU)</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+body {
+  background: radial-gradient(circle at top left, #0c0b1a, #050312 70%);
+  color: #e0dfff;
+  font-family: 'Tektur', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.profile-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  background:
+        linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.85)),
+        url('../img/background.jpg') center/cover no-repeat;
+  border: 1px solid rgba(180,160,255,0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(140, 100, 255, 0.2);
+  padding: 2rem 3rem;
+  backdrop-filter: blur(10px);
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.profile-header img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #a89eff;
+  box-shadow: 0 0 15px rgba(150,120,255,0.4);
+}
+.profile-basic h2 {
+  font-size: 1.8rem;
+  color: #d7c8ff;
+  margin-bottom: 0.3rem;
+}
+.profile-basic p {
+  margin: 0.3rem 0;
+  color: #c3baff;
+}
+.label {
+  color: #9d8fff;
+  font-weight: bold;
+}
+.value {
+  color: #e6e3ff;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: rgba(70, 60, 120, 0.3);
+  border: 1px solid rgba(160,140,255,0.2);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0 0 10px rgba(100,80,200,0.2);
+}
+.card h3 {
+  margin-top: 0;
+  color: #bfa8ff;
+}
+#map-placeholder, #aug-placeholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background: rgba(100, 90, 150, 0.2);
+  border: 1px dashed rgba(160,140,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9b90d9;
+  font-style: italic;
+}
+.blur-sensitive {
+  filter: blur(6px);
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+.blur-sensitive:hover {
+  filter: blur(0);
+}
+.graph-area {
+  height: 220px;
+  background: rgba(50, 40, 100, 0.3);
+  border-radius: 10px;
+  border: 1px dashed rgba(150,130,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9d8fff;
+  font-style: italic;
+}
+.contact-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.contact-buttons a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #a36bff, #8750ff);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+}
+.contact-buttons a:hover {
+  background: linear-gradient(90deg, #b580ff, #9d5dff);
+  transform: scale(1.05);
+}
+.section-title {
+  color: #bcaeff;
+  border-left: 3px solid #a36bff;
+  padding-left: 10px;
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+}
+</style>
+</head>
+<body>
+<div class="profile-container">
+  <div class="profile-header">
+    <img src="../img/agent6201.png" alt="Agent Dominik Burgstaller">
+    <div class="profile-basic">
+      <h2>Dominik Burgstaller</h2>
+      <p><span class="label">Codename:</span> KUROSATOU</p>
+      <p><span class="label">Agent ID:</span> ZDS-6201</p>
+      <p><span class="label">Rank:</span> Delivery Agent</p>
+      <p><span class="label">Access:</span> BETA-2 Clearance</p>
+      <p><span class="label">Status:</span> <span style="color:#00ff90;">Active Duty</span></p>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div><span class="label">Age:</span> <span class="value">28</span></div>
+    <div><span class="label">DOB:</span> <span class="value">2168-06-25</span></div>
+    <div><span class="label">Species:</span> <span class="value">Felidae, Feline , Cat</span></div>
+    <div><span class="label">Height:</span> <span class="value blur-sensitive">165 cm</span></div>
+    <div><span class="label">Weight:</span> <span class="value blur-sensitive">45 kg</span></div>
+    <div><span class="label">Blood type:</span> <span class="value blur-sensitive">O</span></div>
+    <div><span class="label">Marital Status:</span> <span class="value blur-sensitive">Single</span></div>
+    <div><span class="label">Highest Education:</span> <span class="value">Zwasonia Institute of Technology</span></div>
+  </div>
+
+  <h3 class="section-title">Sector & Route Assignment</h3>
+  <div class="card">
+    <p><span class="label">Sector:</span> A-6 (Urban/Sub-Tunnel Delivery Zone)</p>
+    <div id="map-placeholder">[Map Placeholder — Sector A-6 Layout]</div>
+  </div>
+
+  <h3 class="section-title">Specialization</h3>
+  <div class="card">
+    <p><span class="value">Expert in routes and high-speed parcel delivery under tight timeframes. Known for precise navigation and rapid adaptive response to traffic matrix updates.</span></p>
+  </div>
+
+  <h3 class="section-title">Augmentation Data</h3>
+  <div class="card">
+    <p><span class="label">Installed Systems:</span> Neural Interface (Gen-4)</p>
+    <div id="aug-placeholder">[Augmentation Visual Placeholder]</div>
+  </div>
+
+  <h3 class="section-title">Mission Records</h3>
+  <div class="card">
+    <p><span class="label">Current Zone Assignments:</span> A-6</p>
+    <p><span class="label">Recent Tasks:</span></p>
+    <ul style="margin-top:0.5rem;">
+      <li>High-priority cybernetics delivery to Hermann Sector C Clinic</li>
+      <li>Confidential document transfer to Sector HQ</li>
+      <li>Emergency resource relay during power grid collapse</li>
+    </ul>
+    <p><span class="label">Performance Rating:</span> <span style="color:#00ffaa;">Excellent (98.4%)</span></p>
+  </div>
+
+  <h3 class="section-title">Efficiency Evaluation</h3>
+  <div class="graph-area">
+    [Performance Graph Placeholder — delivery success rate, time metrics, and reliability score]
+  </div>
+
+  <h3 class="section-title">Personal Bio</h3>
+  <div class="card">
+    <p>Graduated from the <b>Zwasonia Institute of Technology</b> with advanced product management knowledge and a deep interest in applied sciences. Known among peers for calm precision, analytical delivery route optimization, and strong adaptability under pressure. His quiet demeanor conceals an exceptional record in time-critical operations.</p>
+  </div>
+
+  <h3 class="section-title">Contact Links</h3>
+  <div class="contact-buttons">
+    <a href="https://www.facebook.com/krittin.kamjornkittikhun?locale=th_TH" target="_blank">🌐 Facebook</a>
+    <a href="https://x.com/KuroSatou_345?t=N-t0DwacsMeoNH77SsBTow&s=09" target="_blank">🐦 X (Twitter)</a>
+    <a href="https://www.instagram.com/krittin.ipynb/?igsh=NGhwd21tMW94bW54" target="_blank">📷 Instagram</a>
+  </div>
+
+</div>
+
+</body>  
+</html>

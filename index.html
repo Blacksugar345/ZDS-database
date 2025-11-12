@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZDS - Zwasonia Delivery Service</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="img/Animated_ZDS_logo.gif" alt="Loading..." class="loading-logo">
+    </div>
+    
+    <div class="bg-layer"></div>
+    <div class="scanlines"></div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>ZWASONIA DELIVERY SERVICE</h1>
+                    <p>DATABASE SYSTEM</p>
+                </div>
+            </div>
+            <div class="status-bar">
+                <div class="status-item">
+                    <div class="status-dot"></div>
+                    <span>NETWORK ONLINE</span>
+                </div>
+                <div class="status-item">
+                    <span>YOUR SECTOR : A | YEAR 2189</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <h2>INTER-SECTOR LOGISTICS COMMAND</h2>
+            <p>Zwasonia Delivery Service operates under the Center Zwazonia Government charter 4472-B. We specialize in secure transportation of classified materials, experimental technologies, and personnal packages across all 7 sectors of the Salvane City Districts. Our delivery agents are equipped with quantum-encrypted clearances and neural interface tracking ensuring that your package will be delivered to your hands safely without any delays or scratches.</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3><span class="card-icon">👤</span> Staff Database Access</h3>
+                <div class="input-group">
+                    <label>Agent ID or Codename</label>
+                    <input type="text" id="staffId" placeholder="Start with ZDS and 4-digits number">
+                </div>
+                <div class="input-group">
+                    <label>Security Clearance Level</label>
+                    <select id="clearanceLevel">
+                        <option value="">Select Level</option>
+                        <option value="alpha">ALPHA - Command Personnel</option>
+                        <option value="beta">BETA - Field Operatives</option>
+                        <option value="gamma">GAMMA - Support Staff</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="searchStaff()">SEARCH STAFF</button>
+                
+                <div id="staffResult" class="result"></div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📦</span> Package Tracking</h3>
+                <div class="input-group">
+                    <label>Tracking ID</label>
+                    <input type="text" id="trackingId" placeholder="e.g., ZDS-PKG-1234">
+                </div>
+                <div class="input-group">
+                    <label>Verification Code</label>
+                    <input type="text" id="verifyCode" placeholder="6-digit Verification code">
+                </div>
+                <button class="btn" onclick="trackPackage()">INITIATE TRACKING</button>
+                
+                <div id="packageResult" class="result"></div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3><span class="card-icon">⚠️</span> System Notices</h3>
+            <div class="warning">
+                <strong>SECTOR ALERT:</strong> Temporal anomalies detected in Sector 9. All deliveries to Zone 9-C are currently suspended pending chrono-stabilization. Agents are advised to maintain quantum coherence protocols.
+            </div>
+            <p style="margin-top: 1rem; color: #888;">Last updated: 2189.11.06 | 14:37 GST</p>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>ZWASONIA DELIVERY SERVICE © 2189 | Unified Planetary Government Division</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
