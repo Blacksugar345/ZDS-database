@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agent Profile — Dominik Burgstaller (KUROSATOU)</title>
-<link rel="stylesheet" href="../css/style.css">
 <style>
 body {
   background: radial-gradient(circle at top left, #0c0b1a, #050312 70%);
@@ -18,7 +17,7 @@ body {
   margin: 3rem auto;
   background:
         linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.85)),
-        url('../img/background.jpg') center/cover no-repeat;
+        url('../img/Background.jpg') center/cover no-repeat;
   border: 1px solid rgba(180,160,255,0.3);
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(140, 100, 255, 0.2);
@@ -82,6 +81,8 @@ body {
   justify-content: center;
   color: #9b90d9;
   font-style: italic;
+  text-align: center;
+  padding: 1rem;
 }
 .blur-sensitive {
   filter: blur(6px);
@@ -101,6 +102,8 @@ body {
   justify-content: center;
   color: #9d8fff;
   font-style: italic;
+  text-align: center;
+  padding: 1rem;
 }
 .contact-buttons {
   margin-top: 2rem;
@@ -118,6 +121,9 @@ body {
   font-weight: bold;
   letter-spacing: 0.5px;
   transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 .contact-buttons a:hover {
   background: linear-gradient(90deg, #b580ff, #9d5dff);
@@ -129,6 +135,165 @@ body {
   padding-left: 10px;
   margin-top: 2.5rem;
   font-size: 1.2rem;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES FOR PROFILE PAGE
+   ============================================ */
+
+/* Tablets and smaller */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-header img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .profile-basic h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-basic p {
+    font-size: 0.95rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  #map-placeholder, #aug-placeholder {
+    height: 150px;
+    font-size: 0.9rem;
+  }
+  
+  .graph-area {
+    height: 180px;
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-buttons {
+    gap: 0.6rem;
+  }
+  
+  .contact-buttons a {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .card ul {
+    padding-left: 1.2rem;
+  }
+  
+  .card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .profile-container {
+    margin: 1rem 0.5rem;
+    padding: 1.25rem;
+  }
+  
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-basic h2 {
+    font-size: 1.3rem;
+  }
+  
+  .profile-basic p {
+    font-size: 0.85rem;
+  }
+  
+  .label {
+    font-size: 0.8rem;
+  }
+  
+  .value {
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  #map-placeholder, #aug-placeholder {
+    height: 120px;
+    font-size: 0.85rem;
+  }
+  
+  .graph-area {
+    height: 150px;
+    font-size: 0.85rem;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+  }
+  
+  .contact-buttons a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .card ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape orientation on small devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .profile-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .profile-header img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .section-title {
+    margin-top: 1.5rem;
+  }
 }
 </style>
 </head>
@@ -204,6 +369,25 @@ body {
   </div>
 
 </div>
+
+<script>
+// Optional: Add any interactive JavaScript here if needed
+// For example, you could add click handlers for the blur-sensitive elements
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Make blur-sensitive items tap to reveal on mobile
+  const blurElements = document.querySelectorAll('.blur-sensitive');
+  
+  blurElements.forEach(element => {
+    element.addEventListener('click', function() {
+      this.style.filter = 'blur(0)';
+      setTimeout(() => {
+        this.style.filter = 'blur(6px)';
+      }, 3000); // Blur again after 3 seconds
+    });
+  });
+});
+</script>
 
 </body>  
 </html>
