@@ -47,7 +47,7 @@ body {
     height: 100%;
     background: 
         linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.85)),
-        url('../img/Background.jpg') center/cover no-repeat;
+        url('../img/background.jpg') center/cover no-repeat;
     z-index: -2;
 }
 
@@ -91,6 +91,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .logo {
@@ -130,6 +132,7 @@ header {
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .status-item {
@@ -263,11 +266,16 @@ main {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    min-height: 48px;
 }
 
 .btn:hover {
     box-shadow: 0 0 25px rgba(81, 74, 177, 0.7);
     transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 .result {
@@ -434,3 +442,201 @@ main {
     transform: scale(1.05);
 }
 
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablets and smaller (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 1rem 1rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .logo {
+        width: 100%;
+    }
+    
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.75rem;
+    }
+    
+    .status-bar {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .status-item {
+        font-size: 0.8rem;
+    }
+    
+    /* Main content */
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    /* Grid - single column on mobile */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Staff profile - stack on mobile */
+    .staff-profile {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .staff-avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
+    
+    /* Package info - single column on mobile */
+    .package-info {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .info-item {
+        padding: 0.8rem;
+    }
+    
+    /* Timeline adjustments */
+    .timeline {
+        padding-left: 0.8rem;
+    }
+    
+    .timeline-item {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer {
+        font-size: 0.8rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Small phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .input-group input, 
+    .input-group select {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.9rem;
+    }
+    
+    .staff-avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+    
+    .staff-details h4 {
+        font-size: 1.2rem;
+    }
+    
+    .staff-details p {
+        font-size: 0.9rem;
+    }
+    
+    .warning {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Landscape phones */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 1.5rem 1rem;
+    }
+}
